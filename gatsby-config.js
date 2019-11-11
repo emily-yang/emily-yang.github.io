@@ -21,6 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        name: `Emily Yang`,
         start_url: `/`,
         background_color: `#4d6b8ba8`,
         theme_color: `#4d6b8ba8`,
