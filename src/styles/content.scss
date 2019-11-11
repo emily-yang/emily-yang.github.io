@@ -1,0 +1,72 @@
+@import "general";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  font-family: $text-font;
+  color: $white;
+
+  .title {
+    display: inline-block;
+    @include title();
+    @include underline();
+
+    & + p {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .front-title {
+    font-family: $nav-font;
+    @include link();
+  }
+
+  p {
+    margin: 0.5rem;
+    font-size: 1.2rem;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      @include underline();
+
+      &:hover {
+        @include glowing();
+      }
+    }
+  }
+
+  .logo {
+    margin: 1rem;
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 700px ) {
+    .title + p {
+      text-align: center;
+    }
+  }
+
+
+  @media (max-width: 440px ) {
+    .title {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .title + p {
+      text-align: center;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,206 @@
+@import "general";
+
+* {
+  // outline: 1px solid red;
+  box-sizing:border-box;
+}
+
+/* resets */
+html,
+body, #___gatsby {
+  height: 100vh;
+  margin: 0;
+}
+
+div[role="group"][tabindex] {
+  height: 100%;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: $font-size;
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+    box-shadow: inset 0 0 5px grey;
+    // border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $dim-white;
+    border-radius: 15px;
+  }
+
+  body {
+    // margin: 0 auto;
+    // height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(20deg, $bottom-color, $top-color 85%, $top-color);
+    display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+
+    #___gatsby {
+      width: 100%;
+    }
+
+    .layout {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100vh;
+      max-width: 960px;
+      width: 100%;
+      margin: auto;
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        margin-bottom: 1.45rem;
+        font-family: $nav-font;
+        padding: 2.5rem 1rem 0 1rem;
+
+        a {
+          display: inline-block;
+          margin: 0 1rem;
+          @include link();
+        }
+
+        nav {
+          a {
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            display: inline-block;
+            // @include sideline();
+            @include hover-underline();
+
+            &:hover {
+              -webkit-transform: translateY(-3px);
+              transform: translateY(-3px);
+
+              @include glow();
+            }
+          }
+        }
+
+        #header-logo {
+          margin-right: 0.75rem;
+          margin-left: 0;
+        }
+
+        #name {
+          font-size: 2.5rem;
+          font-weight: bold;
+          // transition: text-shadow .3s ease-in-out;
+          text-shadow: none;
+          color: $white;
+
+          &:hover {
+            // animation: 3s glow-pulse infinite;
+            @include glowing();
+          }
+        }
+      }
+
+      main {
+        flex-grow: 1;
+        margin-bottom: 2rem;
+      }
+
+      footer {
+        @include link();
+        padding:  0 2rem 2rem 2rem;
+        display: flex;
+
+        #copyright {
+          margin-right: 1rem;
+        }
+
+        #gatsby-footer {
+          font-size: 1.5rem;
+          align-self: center;
+
+          a {
+            @include underline();
+            color: $white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 700px ) {
+    header {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    #main {
+      margin-bottom: 0;
+    }
+
+    #footer {
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      padding: 1rem 2rem;
+
+      #copyright {
+        font-size: 1.5rem;
+        margin-right: .5rem;
+      }
+      #gatsby-footer {
+        font-family: $text-font;
+        font-size: .8rem;
+      }
+    }
+  }
+
+  @media (max-width: 440px ) {
+      #header {
+        padding-top: 1rem;
+        nav {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          a {
+            // font-family: $text-font;
+            font-size: 1.5rem;
+            margin: 0;
+          }
+        }
+      }
+
+    #footer {
+      font-family: $text-font;
+      padding: 0 2rem 1rem 2rem;
+      // background-color: black;
+
+      #copyright {
+        font-size: 1rem;
+      }
+      #gatsby-footer {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  @media (pointer:coarse) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+$bottom-color: #ec8c8d;
+$top-color: #4d6b8ba8;
+$white: #f1f1f1;
+$bottom-scrollbar-color: #d7c4d0;
+$dim-white: rgba(242, 242, 242, 0.7);
+$font-size: 20px;
+$nav-font: 'Amatic SC', 'Calibri', 'Arial Narrow', sans-serif;
+$text-font: 'Open Sans', sans-serif;
+$underline: underline solid red 1px;
+
+@mixin link() {
+  font-family: $nav-font;
+  color: $white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+@mixin title() {
+  font-family: $nav-font;
+  color: $white;
+  font-size: 2.5rem;
+}
+
+@mixin bold() {
+  text-shadow: 0.5px 0.5px 0.5px rgba(250,250,250, 0.4),  -0.5px -0.5px 0.5px rgba(250,250,250, 0.4),  -0.5px 0.5px 0.5px rgba(250,250,250, 0.4),  0.5px -0.5px 0.5px rgba(250,250,250, 0.4);
+}
+
+@mixin underline() {
+  border-bottom: solid 1px $dim-white;
+}
+
+
+
+@mixin glow() {
+  color: white;
+  text-shadow: 1px 1px .5rem rgba(250,250,250, 0.4),  -1px -1px .5rem rgba(250,250,250, 0.4),  -1px 1px .5rem rgba(250,250,250, 0.4),  1px -1px .5rem rgba(250,250,250, 0.4);
+}
+
+
+@mixin hover-underline() {
+  &:after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px $white;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+  }
+}
+
+@mixin sideline() {
+  &:before, &:after {
+    position: absolute;
+    content: '-';
+    opacity: 0;
+  }
+  &:before {
+    -webkit-transform: translateX(-1ch);
+    transform: translateX(-1ch);
+  }
+
+  &:hover {
+    &:before, &:after {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes glow-pulse {
+  33%, 50% { @include glow();}
+}
+
+@mixin glowing() {
+  animation: 3s glow-pulse infinite;
+}

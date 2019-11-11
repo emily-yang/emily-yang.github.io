@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Stonehaven Academy",
+    "link": "https://stonehaven-academy.netlify.com/",
+    "description": "An online learning platform with video tutorials for becoming a D&D dungeonmaster. Built with team of 5 following agile methodology. Future plans include user progress tracking and customizable themes.",
+    "tech": "React, Node, PostgreSQL",
+    "img":"/stonehaven.png",
+    "active_img":"/ani-stonehaven.gif"
+  },
+  {
+    "title": "Concentration",
+    "link": "https://concentration-js.netlify.com/",
+    "description": "A desktop web app version of the classic memory game to find matching pairs in the shortest time possible.",
+    "tech": "Vanilla JS",
+    "img":"/concentration.png",
+    "active_img":"/ani-concentration.gif"
+  },
+  {
+    "title": "Aura",
+    "link": "https://aura.community",
+    "description": "An application that lets users search for LA-based venues by activity and ambience. Built with team of 7 following agile methodology.",
+    "tech": "React, Node, MongoDB",
+    "img":"/aura.png",
+    "active_img":"/ani-aura.gif"
+  },
+  {
+    "title": "Connect Four",
+    "link": "https://ey-connectfour.netlify.com/",
+    "description": "A desktop web app take on the tabletop game to be first to connect four in a row. Includes sound effects and animations to simulate the actual game.",
+    "tech": "Vanilla JS",
+    "img":"/connect4.png",
+    "active_img":"/ani-connect4.gif"
+  },
+  {
+    "title": "StreakBot",
+    "link": "https://github.com/emily-yang/discord-streak",
+    "description": "A Discord bot that allows players to track win streaks for king-of-the-hill-style competitions.",
+    "tech": "Node, SQLite",
+    "img":"/streakbot.png",
+    "active_img":"/ani-streakbot.gif"
+  }
+]

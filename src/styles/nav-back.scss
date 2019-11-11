@@ -1,0 +1,17 @@
+@import 'general';
+
+.nav-back {
+  @include link();
+  margin-top: 1rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    @include glowing();
+  }
+
+  &:focus {
+    transform: skew(10deg);
+    // transform: translateX(-200%);
+    // opacity: 0;
+  }
+}

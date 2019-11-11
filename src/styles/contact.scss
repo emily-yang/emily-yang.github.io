@@ -1,0 +1,27 @@
+@import "general";
+
+.contact.content {
+
+  & > * {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  p {
+    text-align: center;
+  };
+
+
+
+  @media (max-width: 440px ) {
+    .contact-logos {
+      align-self: stretch;
+      display: flex;
+      justify-content: space-around;
+      // margin: 0;
+      .logo {
+        margin: 1rem 0.5rem 0.5rem 0.5rem;
+      }
+    }
+  }
+}

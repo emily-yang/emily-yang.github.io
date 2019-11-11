@@ -1,0 +1,67 @@
+@import "general";
+
+.home.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  & > * {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+
+  #title-one {
+    font-family: $nav-font;
+    font-size: 3.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  #title-two {
+    font-size:2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 700px ) {
+    #title-one, #title-two {
+      align-self: center;
+      text-align: center;
+    }
+
+    #title-one {
+      margin-top: 0;
+      font-size: 2.5rem;
+    }
+
+    #title-two {
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 440px ) {
+    p {
+      font-size: 1rem;
+    }
+
+    #title-one {
+      font-size: 2rem;
+    }
+
+    #title-two {
+      // font-family: $text-font;
+      // font-size: 1rem;
+      // font-weight: normal;
+      // margin-bottom: 0;
+      display: none;
+    }
+  }
+}

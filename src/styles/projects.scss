@@ -1,0 +1,129 @@
+@import "general";
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+
+  .project {
+    flex: 0 1 960px;
+    margin: 1rem 3rem;
+
+    &:hover {
+              transform: scale(1.1);
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      // padding: 2rem;
+      // border: dotted 1px transparent;
+      transition: all 0.35s ease-in-out;
+      transition: transform 0.3s ease-out;
+
+      &:hover {
+        // border: dashed 1px $white;
+        background-color: rgba(250, 250, 250, 0.2);
+        // border-color: $white;
+        // transform: scale(1.1);
+
+        .static-img {
+          position: absolute;
+          opacity: 0;
+        }
+
+        .active-img {
+          position: static;
+          border-radius: 10%;
+          opacity: 1;
+        }
+
+        h3 {
+          @include glow();
+        }
+      }
+
+      & > * {
+        margin: 0 auto;
+      }
+
+      // h3 {
+      //   @include underline();
+      //   align-self: flex-start;
+      //   margin-bottom: 0;
+      // }
+
+      .project-info {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        &:first-child {
+          flex-shrink: 0;
+        }
+
+        h3 {
+          font-family: $nav-font;
+          font-size: 2rem;
+        }
+      }
+
+      .project-info > p {
+        margin: 1rem;
+      }
+
+      h3 {
+        @include underline();
+        align-self: flex-start;
+        margin: 1rem 1rem 0 1rem;
+      }
+
+      img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin: 1rem;
+        transition: opacity .1s ease-in-out .1s;
+      }
+
+      .active-img {
+        position: absolute;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+      }
+    }
+  }
+  @media (max-width: 700px ) {
+    .project {
+      border-top: dotted 1px $white;
+      border-bottom: dotted 1px $white;
+      a {
+        flex-direction: column;
+        text-align: center;
+
+        h3 {
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 440px ) {
+    p {
+      text-align: center;
+    }
+  }
+
+  @media (pointer:coarse) {
+    .project {
+      border-top: dotted 1px $white;
+      border-bottom: dotted 1px $white;
+    }
+  }
+}
