@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Emily Yang`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Portfolio page with recent projects`,
     author: `Emily Yang`,
     email: `eyang6@gmail.com`,
     linkedin: `https://www.linkedin.com/in/emilyyang1/`,
@@ -16,16 +16,16 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    // `gatsby-transformer-sharp`,
+    // `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Emily Yang`,
+        short_name: `Emily Yang`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#4d6b8ba8`,
+        theme_color: `#4d6b8ba8`,
         display: `minimal-ui`,
         icon: `src/images/eylogo.png`, // This path is relative to the root of the site.
       },
